@@ -32,3 +32,24 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerSelection == "SCISSORS" && playerSelection == "SCISSORS") { console.log("DRAW")
     }
   }
+
+//Loop that plays five round rounds and returns the end score
+
+  function game(){
+    for (let i = 0; i <= 5; i++){
+      const playerSelection = prompt("ROCK, PAPER, SCISSORS?");
+      const computerSelection = getComputerChoice(array);
+      playRound(playerSelection, computerSelection);
+    }
+
+    
+    console.log("AI vs YOU" + "\n" + computerScore + "     " + playerScore) 
+
+    if (computerScore > playerScore){
+      console.log("Sorry! You lost the game!")
+    }else {
+      console.log ("Congratulations! You won!")
+    }
+  }
+
+  game()
