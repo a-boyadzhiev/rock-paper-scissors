@@ -47,9 +47,12 @@ function playRound(playerSelection, computerSelection) {
 
     if (computerScore > playerScore){
       console.log("Sorry! You lost the game!")
+    }else if (computerScore == playerScore) {
+      console.log ("DRAW!")
     }else {
       console.log ("Congratulations! You won!")
     }
+
   }
 
   game()
