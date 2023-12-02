@@ -36,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
 //Loop that plays five round rounds and returns the end score
 
   function game(){
-    for (let i = 0; i <= 5; i++){
+    for (let i = 1; i <= 5; i++){
       const playerSelection = prompt("ROCK, PAPER, SCISSORS?");
       const computerSelection = getComputerChoice(array);
       playRound(playerSelection, computerSelection);
