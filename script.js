@@ -1,5 +1,3 @@
-// Function that chooses randomly
-
 const array = ["ROCK", "PAPER", "SCISSORS"];
 
       function getComputerChoice (array) {
@@ -8,12 +6,8 @@ const array = ["ROCK", "PAPER", "SCISSORS"];
         return choice;
       }
 
-// Variables that store the score
-
 let computerScore = 0;
 let playerScore = 0;
-
-// Function that stores the different cases
 
 function playRound(playerSelection, computerSelection) {
 
@@ -32,8 +26,6 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerSelection == "SCISSORS" && playerSelection == "SCISSORS") { console.log("DRAW")
     }
   }
-
-//Loop that plays five round rounds and returns the end score
 
   function game(){
     for (let i = 1; i <= 5; i++){
