@@ -13,7 +13,7 @@ const array = ["ROCK", "PAPER", "SCISSORS"];
 let computerScore = 0;
 let playerScore = 0;
 
-// Function that store the different cases
+// Function that stores the different cases
 
 function playRound(playerSelection, computerSelection) {
 
