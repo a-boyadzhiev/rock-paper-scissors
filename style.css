@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 80px;
+    gap: 55px;
     margin: 0px;
     padding: 0px;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ h2{
     gap: 10px;
 }
 
-.elements{
+.buttons{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@ h2{
     flex-wrap: wrap;
 }
 
-.imgs:hover{
+button:hover{
     transform: scale(1.15);
 }
 
@@ -54,3 +54,15 @@ p {
     text-align: center;
     font-weight: bolder;
 }
+
+button{
+    padding: 40px;
+    color: transparent;
+    border-radius: 50%;
+}
+ .text-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+ }
