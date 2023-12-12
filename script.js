@@ -37,3 +37,20 @@ function computerPlay (compChoice) {
   
   return choiceNum;
 }
+
+function playRound (){
+  let winArray = [[0, 2, 1], [1, 0, 2], [2, 1, 0]];
+  let result = winArray[playerChoiceInt][compChoiceInt];
+
+  if (result == 0){
+    output.textContent = `Its a tie! You chose ${playerChoice} and The computer chose ${compChoice.Value}`;
+  }
+  else if (result == 1){
+    output.textContent = `You won! You chose ${playerChoice} and The computer chose ${compChoice.Value}`;
+    playerScore++
+  }
+  else if (result == 1){
+    output.textContent = `You lost! You chose ${playerChoice} and The computer chose ${compChoice.Value}`;
+    compScore++
+  }
+}
