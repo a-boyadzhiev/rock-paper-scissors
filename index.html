@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,17 +13,17 @@
         <h2>First to 5 wins!</h2>
     </div>
 
-    <div class="elements">
-        <img class="imgs" id="rock" src="images/rock.png" width="300px" height="auto">
-        <img class="imgs" id="paper" src="images/paper.png" width="300px" height="auto">
-        <img class="imgs" id="scissors" src="images/scissors.png" width="300px" height="auto">
+    <div class="buttons">
+        <button class="btn" id="rock"><img src="images/rock.png" width="200px" height="200px" alt="rock image"/></button>
+        <button class="btn" id="paper"><img src="images/paper.png" width="200px" height="200px" alt="paper image"/></button>
+        <button class="btn" id="scissors"><img src="images/scissors.png" width="200px" height="200px" alt="scissors image"/></button>
     </div>
     
     <div class="text-line">
         <p class="text" id="player-score">Player Score:</p>
         <p class="text" id="comp-score">Computer Score:</p>
     </div>
-    
+
     <div>
         <p class="text" id="output">May the Best Person Win!</p>
     </div>
