@@ -1,50 +1,39 @@
-const array = ["ROCK", "PAPER", "SCISSORS"];
-
-      function getComputerChoice (array) {
-        const randomChoice = Math.floor(Math.random() * array.length)
-        const choice = array[randomChoice]
-        return choice;
-      }
+let compChoice = {Value: ""};
+let playerChoice;
+let compChoiceInt = 0;
+let playerChoiceInt = 0;
+const images = document.querySelectorAll('.img');
 
 let computerScore = 0;
 let playerScore = 0;
 
-function playRound(playerSelection, computerSelection) {
+const player = document.querySelector("#player-score");
+player.textContent = `Player Score: ${playerScore}`;
 
-    playerSelection = playerSelection.toUpperCase();
-    computerSelection = getComputerChoice(array);
-    console.log("The computer chose " + computerSelection + "\nYou chose " + playerSelection + "\n........................................")
+const computer = document.querySelector("#comp-score");
+computer.textContent = `Computer Score: ${compScore}`;
 
-    if (computerSelection == "ROCK" && playerSelection == "ROCK") {console.log("DRAW! Play again.")
-    } else if (computerSelection == "ROCK" && playerSelection == "PAPER")  {console.log("YOU WIN THIS ROUND"), playerScore++
-    } else if (computerSelection == "ROCK" && playerSelection == "SCISSORS") { console.log("YOU LOSE THIS ROUND"), computerScore++
-    } else if (computerSelection == "PAPER" && playerSelection == "SCISSORS") { console.log("YOU WIN THIS ROUND"), playerScore++
-    } else if (computerSelection == "PAPER" && playerSelection == "ROCK") { console.log("YOU LOSE THIS ROUND"), computerScore++
-    } else if (computerSelection == "PAPER" && playerSelection == "PAPER") { console.log("DRAW")
-    } else if (computerSelection == "SCISSORS" && playerSelection == "PAPER") { console.log("YOU LOSE THIS ROUND"), computerScore++
-    } else if (computerSelection == "SCISSORS" && playerSelection == "ROCK") { console.log("YOU WIN THIS ROUND"), playerScore++
-    } else if (computerSelection == "SCISSORS" && playerSelection == "SCISSORS") { console.log("DRAW")
-    }
-  }
+const output = document.querySelector("#output");
+output.textContent = "May the Best Person Win!"
 
-  function game(){
-    for (let i = 1; i <= 5; i++){
-      const playerSelection = prompt("ROCK, PAPER, SCISSORS?");
-      const computerSelection = getComputerChoice(array);
-      playRound(playerSelection, computerSelection);
-    }
 
+images.forEach((img) => {img.addEventListener('click', () => {
+    playerChoice = img.id;
+    if (playerChoice == "rock"){playerChoiceInt = 0;}
+    else if (playerChoice == "paper"){playerChoiceInt = 1;}
+    else if (playerChoice == "scissors"){playerChoiceInt = 2;}
+
+    compChoiceInt = getComputerChoice(array);
     
-    console.log("AI vs YOU" + "\n" + computerScore + "     " + playerScore) 
+  }) 
+});
 
-    if (computerScore > playerScore){
-      console.log("Sorry! You lost the game!")
-    }else if (computerScore == playerScore) {
-      console.log ("DRAW!")
-    }else {
-      console.log ("Congratulations! You won!")
-    }
+function computerPlay (compChoice) {
+  let choiceNum = Math.floor(Math.random() * 3)
 
-  }
-
-  game()
+  if (choiceNum == 0){compChoice.value = "rock";}
+  else if (choiceNum == 1){compChoice.value = "paper";}
+  else if (choiceNum == 2){compChoice.value = "scissors";}
+  
+  return choiceNum;
+}
