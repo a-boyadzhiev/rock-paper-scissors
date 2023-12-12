@@ -51,6 +51,21 @@ function playRound (){
   }
   else if (result == 1){
     output.textContent = `You lost! You chose ${playerChoice} and The computer chose ${compChoice.Value}`;
-    compScore++
+    computerScore++
+  }
+}
+
+function playGame(){
+  output.textContent = "Choose Rock, Paper, or Scissors"
+
+  playRound();
+
+  player.textContent = `Player Score: ${playerScore}`;
+  computer.textContent = `Computer Score: ${computerScore}`;
+
+  if (playerScore == 5){
+    output.textContent = "You won the game!"
+  }else if (computerScore == 5){
+    output.textContent = "You lost the game!"
   }
 }
