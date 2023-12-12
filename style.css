@@ -17,6 +17,7 @@ h1 {
     color: black;
     font-weight: bolder;
     margin-bottom: 0px;
+    text-align: center;
 }
 
 h2{
@@ -40,8 +41,16 @@ h2{
     align-items: center;
     flex-direction: row;
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 .imgs:hover{
     transform: scale(1.15);
+}
+
+p {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
 }
